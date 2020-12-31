@@ -8,8 +8,9 @@ const Searchbar = ({
 	placeholder = '',
 	className = '',
 	id = '',
+	setValue = () => {},
 }) => {
-	const [value, handelInputChange] = useInputText(defaultValue);
+	const [value, handelInputChange] = useInputText(defaultValue, setValue);
 	return (
 		<div className="input-text">
 			<label className="input-text__label">{label}</label>
