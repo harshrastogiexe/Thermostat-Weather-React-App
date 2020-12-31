@@ -1,0 +1,36 @@
+button {
+	$font-size: 0.8rem;
+	$primary-color: $nuetral-100;
+	$secondry-color: $violet;
+
+	background-color: $primary-color;
+	display: inline-block;
+	padding: calc(#{$font-size} * 0.5) calc(#{$font-size} * 0.7);
+
+	border: none;
+	outline: none;
+
+	border-radius: calc(#{$font-size} * 0.4);
+	transition: 250ms ease-in;
+
+	position: relative;
+
+	a {
+		text-decoration: none;
+		color: $secondry-color;
+
+		span {
+			font-size: $font-size;
+			font-family: $content-font;
+			font-weight: 600;
+		}
+	}
+
+	&:hover {
+		background-color: darken($color: $primary-color, $amount: 5%);
+	}
+
+	&:active {
+		background-color: darken($color: $primary-color, $amount: 25%);
+	}
+}

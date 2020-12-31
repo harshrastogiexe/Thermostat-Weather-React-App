@@ -1,0 +1,71 @@
+.input-text {
+	max-width: 600px;
+
+	&__label {
+		font-family: $content-font;
+		font-size: 0.6rem;
+		color: transparentize($color: $nuetral-300, $amount: 0.5);
+		padding: 0px;
+		font-size: 0.75rem;
+		font-weight: 400;
+		line-height: 2;
+	}
+
+	&__field {
+		display: flex;
+		align-items: center;
+		padding: 0 2px;
+		padding-bottom: 0.3rem;
+		position: relative;
+		flex: 1;
+
+		&::after {
+			content: '';
+
+			position: absolute;
+			bottom: -3px;
+			left: 0;
+
+			width: 80%;
+			height: 3px;
+			border-radius: 0.2em;
+			transform: scaleY(0.5);
+			transform-origin: center;
+			background-color: transparentize($color: $nuetral-300, $amount: 0.6);
+			transition: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+		}
+
+		&:hover {
+			&::after {
+				background-color: transparentize($color: $violet, $amount: 0.2);
+				transform: scaleY(1);
+				width: 100%;
+			}
+		}
+
+		div:first-child {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-right: 10px;
+		}
+
+		input {
+			$input-size: 1rem;
+
+			background: none;
+			border: none;
+			outline: none;
+
+			color: $violet;
+			font-size: $input-size;
+			font-family: $sub-heading-font;
+			font-weight: 600;
+			width: 100%;
+
+			&::placeholder {
+				color: transparentize($color: $nuetral-200, $amount: 0);
+			}
+		}
+	}
+}

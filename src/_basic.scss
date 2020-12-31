@@ -1,0 +1,29 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-size: $content-size;
+	font-weight: 400;
+	font-family: $content-font;
+	line-height: 1.4;
+	background-color: $nuetral-100;
+	color: $nuetral-300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1.6;
+}

@@ -1,0 +1,32 @@
+.navbar {
+	@include flex();
+	align-items: center;
+	justify-content: space-between;
+
+	padding: 1em 3em;
+
+	&__left {
+		@include flex();
+		align-items: center;
+		div:only-child {
+			margin-right: 1rem;
+		}
+		span {
+			font-family: $heading-font;
+			font-size: 1.5rem;
+			color: $nuetral-200;
+
+			&:last-child {
+				color: $violet;
+			}
+		}
+	}
+
+	&__right {
+		@include flex();
+		align-items: center;
+		gap: 10px;
+		justify-content: space-between;
+		flex: 0.15;
+	}
+}

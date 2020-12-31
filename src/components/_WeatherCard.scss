@@ -1,0 +1,82 @@
+.weatherCard {
+	margin-inline: auto;
+	width: 50%;
+	max-width: 1200px;
+	margin: 0 auto;
+	background-color: rgb(255, 255, 255);
+	border-radius: 1em;
+	box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+		0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+	padding: 1em;
+	border-radius: 0.4em;
+	font-family: $sub-heading-font;
+	color: rgb(33, 33, 33);
+	-webkit-font-smoothing: antialiased;
+
+	&__header {
+		h1,
+		h3 {
+			line-height: 1;
+			font-family: $heading-font;
+			text-transform: capitalize;
+		}
+		h3 {
+			font-style: $sub-heading-font;
+			font-size: 1rem;
+			color: darken($color: $nuetral-200, $amount: 0.2);
+		}
+	}
+
+	&__body {
+		min-height: 200px;
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		margin: 1rem 0;
+
+		& > * {
+			width: 30%;
+			display: flex;
+		}
+
+		h2 {
+			align-items: center;
+			font-size: 3.5rem;
+		}
+
+		div:not(.meta__data) {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+
+			.icon {
+				color: $violet;
+				font-size: 8rem;
+			}
+		}
+
+		.meta__data {
+			div {
+				.icon {
+					color: $violet;
+					font-size: 2.2rem;
+					margin-right: 10px;
+				}
+
+				span {
+					font-size: 0.85rem;
+				}
+			}
+
+			gap: 1rem;
+			display: flex;
+			width: 100%;
+			margin: 2rem 0 1rem 0;
+		}
+	}
+}
+
+.para {
+	font-size: 1.3rem;
+	font-family: $sub-heading-font;
+}

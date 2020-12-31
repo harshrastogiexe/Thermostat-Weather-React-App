@@ -1,0 +1,32 @@
+//
+// Color
+//
+$nuetral-0: #fff;
+$nuetral-100: #fafafa;
+$nuetral-200: #a7adb8;
+$nuetral-300: #212121;
+
+$violet: #673ab7;
+//
+// Fonts
+//
+$heading-font: 'Josefin Sans';
+$sub-heading-font: 'Montserrat';
+$content-font: 'Open Sans';
+
+// Font Sizes
+$heading-size: 2rem;
+$sub-heading-size: 1.5rem;
+$content-size: 1rem;
+
+//
+
+@mixin margin-center($width) {
+	width: $width;
+	margin: 0 auto;
+}
+
+@mixin flex($direction: 'row') {
+	display: flex;
+	flex-direction: $direction;
+}
