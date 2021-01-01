@@ -8,7 +8,6 @@ const WeatherCard = ({ data }) => {
 	useEffect(() => {
 		const intervalId = setInterval(() => {
 			setTime(new Date());
-			console.log('updated');
 		}, 6 * 10 * 1000);
 
 		return () => {
