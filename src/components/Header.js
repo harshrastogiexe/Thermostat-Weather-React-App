@@ -12,8 +12,10 @@ const Header = () => {
 				</div>
 
 				<div className="navbar__right">
-					<Button>About</Button>
-					<Button>Github</Button>
+					<Button href="https://www.linkedin.com/in/harsh-rastogi-0970b61a1">About</Button>
+					<Button href="https://github.com/theharshrastogi/Thermostat-Weather-React-App">
+						Github
+					</Button>
 				</div>
 			</nav>
 		</header>
