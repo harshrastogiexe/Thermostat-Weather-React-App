@@ -13,6 +13,9 @@
 	color: rgb(33, 33, 33);
 	-webkit-font-smoothing: antialiased;
 
+	@media (max-width: 500px) {
+		width: 90%;
+	}
 	&__header {
 		h1,
 		h3 {
@@ -34,14 +37,29 @@
 		flex-wrap: wrap;
 		margin: 1rem 0;
 
+		@media screen {
+			flex-direction: column;
+			justify-content: center;
+		}
+
 		& > * {
 			width: 30%;
 			display: flex;
+			@media (max-width: 500px) {
+				align-items: center;
+				justify-content: center;
+				width: 100%;
+			}
 		}
 
 		h2 {
 			align-items: center;
+
 			font-size: 3.5rem;
+
+			@media (min-width: 500px) {
+				order: 1;
+			}
 		}
 
 		div:not(.meta__data) {
@@ -52,6 +70,14 @@
 			.icon {
 				color: $violet;
 				font-size: 8rem;
+			}
+			@media (max-width: 500px) {
+				order: 0;
+				display: flex;
+				justify-content: center;
+				.icon {
+					font-size: 6rem;
+				}
 			}
 		}
 
@@ -66,6 +92,18 @@
 				span {
 					font-size: 0.85rem;
 				}
+				@media (max-width: 500px) {
+					order: 2;
+
+					display: flex;
+					flex-direction: column;
+					justify-content: space-around;
+
+					.icon {
+						font-size: 1.6rem;
+						margin-bottom: 0.5em;
+					}
+				}
 			}
 
 			gap: 1rem;
@@ -79,4 +117,8 @@
 .para {
 	font-size: 1.3rem;
 	font-family: $sub-heading-font;
+
+	@media (max-width: 500px) {
+		font-size: 1.1rem;
+	}
 }

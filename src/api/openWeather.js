@@ -18,4 +18,13 @@ const getWeatherByLocation = async (location) => {
 	return response;
 };
 
-export { getWeatherByLocation };
+const getWeatherByCoordinate = async (longitude = 139, latitude = 35) => {
+	return await openWeather.get('/weather', {
+		params: {
+			lat: latitude,
+			lon: longitude,
+		},
+	});
+};
+
+export { getWeatherByLocation, getWeatherByCoordinate };

@@ -2,7 +2,6 @@ import React from 'react';
 import { useInputText } from '../hooks/useInputText';
 import { Search } from 'react-feather';
 
-
 const Searchbar = ({
 	label = '',
 	placeholder = '',
@@ -11,7 +10,6 @@ const Searchbar = ({
 	value = '',
 	setValue,
 }) => {
-	console.count('Searchbar 🚀🚀>>');
 	const [textValue, handelInputChange] = useInputText(value, setValue);
 	return (
 		<div className="input-text">

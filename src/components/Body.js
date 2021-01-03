@@ -1,26 +1,16 @@
-import React, { useEffect, useState } from 'react';
-import Searchbar from './Searchbar';
-import WeatherCard from './WeatherCard';
+import React, { useState } from 'react';
 import useWeatherData from '../hooks/useWeatherData';
+import Searchbar from './Searchbar';
+// import useGeoLocation from '../hooks/useGeoLocation';
 import Spinner from './Spinner';
+import WeatherCard from './WeatherCard';
 
 const Body = () => {
-	const [location, setLocation] = useState('Noida');
-	const weatherData = useWeatherData(location);
-	const [loaded, setLoaded] = useState(false);
-	console.log(loaded);
+	const [location, setLocation] = useState('');
 
-	useEffect(() => {
-		if (!location) return;
-		setLoaded(false);
-	}, [location]);
+	const { weatherData, loaded } = useWeatherData(location);
 
-	useEffect(() => {
-		if (!!weatherData) {
-			setLoaded(true);
-		}
-	}, [weatherData]);
-
+	console.count('<BODY>');
 	return (
 		<div className="body">
 			<div className="search__wrapper">
